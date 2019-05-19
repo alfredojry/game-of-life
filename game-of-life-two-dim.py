@@ -84,9 +84,15 @@ def htmlize(array):
 start = [[1,0,0],
          [0,1,1],
          [1,1,0]]
-end   = [[0,1,0],
+"""end   = [[0,1,0],
          [0,0,1],
          [1,1,1]]
 
 resp = get_generation(start, 1)
-print(htmlize(resp))
+print(htmlize(resp))"""
+
+N = 10
+arr = start[:]
+for i in range(N):
+    arr = get_generation(arr, i)
+    print(htmlize(arr))
